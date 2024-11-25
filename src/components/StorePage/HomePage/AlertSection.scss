@@ -1,0 +1,57 @@
+@keyframes scaleUpDown {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+}
+
+.animate-scale-up-down {
+    animation: scaleUpDown 2s ease-in-out infinite;
+}
+
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        /* Vị trí bắt đầu: bên ngoài màn hình bên phải */
+        opacity: 0;
+        /* Ẩn khi bắt đầu */
+    }
+
+
+    100% {
+        transform: translateX(0);
+        /* Đưa phần tử về vị trí ban đầu */
+        opacity: 1;
+        /* Hiện phần tử lên */
+    }
+}
+
+@keyframes slideOutToRight {
+    0% {
+        transform: translateX(0);
+        /* Vị trí ban đầu */
+        opacity: 1;
+        /* Hiện phần tử */
+    }
+
+    100% {
+        transform: translateX(100%);
+        /* Di chuyển ra ngoài màn hình bên phải */
+        opacity: 0;
+        /* Tắt dần */
+    }
+}
+
+.animate-slide-in {
+    animation: slideInFromRight 0.5s ease-in forwards;
+}
+
+.animate-slide-out {
+    animation: slideOutToRight 1s ease-in forwards;
+}

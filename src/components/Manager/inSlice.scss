@@ -1,0 +1,43 @@
+@keyframes slide-in {
+    0% {
+        transform: translateX(100%);
+        /* Bắt đầu từ bên phải */
+        opacity: 0;
+        /* Bắt đầu trong suốt */
+    }
+
+    100% {
+        transform: translateX(0);
+        /* Đến vị trí ban đầu */
+        opacity: 1;
+        /* Kết thúc trong suốt */
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        transform: translateX(0);
+        /* Bắt đầu tại vị trí hiện tại */
+        opacity: 1;
+        /* Bắt đầu ở trạng thái không trong suốt */
+    }
+
+    100% {
+        transform: translateX(100%);
+        /* Trượt ra bên phải */
+        opacity: 0;
+        /* Kết thúc trong suốt */
+    }
+}
+
+
+
+.slide-out {
+    animation: slide-out 0.5s ease-out forwards;
+    /* Hiệu ứng trượt ra */
+}
+
+.slide-in {
+    animation: slide-in 0.5s ease-out forwards;
+    /* Thay đổi thời gian và độ mượt theo nhu cầu */
+}
